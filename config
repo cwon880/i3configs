@@ -124,8 +124,8 @@ bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+#bindsym $mod+Shift+8 move container to workspace 8
+#bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 #bindsym $mod+Shift+s exec --no-startup-id /home/casey/.config/monitor
 exec --no-startup-id /home/casey/.screenlayout/display.sh
@@ -140,10 +140,12 @@ bindsym $mod+Shift+Escape exit
 
 # bind volume control to keys 
 bindsym $mod+9 exec --no-startup-id pactl set-sink-volume 0 +5% #increase
-
 bindsym $mod+8 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease 
-
 bindsym $mod+7 exec --no-startup-id pactl set-sink-mute 0 toggle #mute
+
+# bind screen brightness
+bindsym $mod+Shift+9 exec ~/.config/i3/brightness_control.sh + #increase 
+bindsym $mod+Shift+8 exec ~/.config/i3/brightness_control.sh - #decrease
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
